@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <pthread.h>
 #include <unistd.h>
+#include <zlib.h>
 
 void* tarefa_thread(void* arg) {
     char* nome = (char*)arg;
@@ -15,6 +16,8 @@ void* tarefa_thread(void* arg) {
 int main() {
 
     pthread_t t1, t2;
+
+    printf("Versão da Zlib em uso: %s\n", zlibVersion());
 
 
     pthread_create(&t1, NULL, tarefa_thread, "A");
