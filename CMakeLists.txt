@@ -14,4 +14,4 @@ add_executable(meu_programa main.c)
 
 target_include_directories(meu_programa PRIVATE ${ZLIB_INCLUDE_DIRS})
 
-target_link_libraries(meu_programa PRIVATE Threads::Threads)
+target_link_libraries(meu_programa PRIVATE Threads::Threads ${ZLIB_LIBRARIES})
